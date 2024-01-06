@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GTA</title>
+		<!-- Include Lightbox2 stylesheets and scripts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Rohan Shende</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About me</a></li>
+							<li class="active"><a href="index.html">My work</a></li>
+							<li><a href="generic.html">Experience</a></li>
+							<li><a href="education.html">Education</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rohanshende1999" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/rohanshende1811" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h3>Grand Theft Autonomous: Robot car</h3>
+									<p><b><i>Final Project, MEAM 5100: Design of Mechatronic Systems</i></b></p>
+								</header>
+								<figure>
+									<div class="image main"><img src="images/GTA_1.PNG" alt="" />
+										<figcaption><center> <i>Fabricated bot</i> </center></figcaption>
+									</div>
+								</figure>
+								<p> <b>Introduction</b> <br/>
+									Embarking on the ambitious mission to design a versatile and autonomous robot vehicle, our team delved into the intricacies of engineering, programming, 
+									and innovation. This endeavor was driven by a tri-fold objective: <br/> 
+									<div class="row">
+										<div class="col-12 col-6-small">
+											<ol>
+												<li>To master the art of precise wall following</li>
+												<li>To navigate the arena to detect, reach, and manipulate trophies using advanced beacon detection</li>
+												<li>To locate and apply force to a strategically positioned police car</li>
+											</ol>
+										</div>
+									</div>
+									Each facet of our journey, from meticulous mechanical design to intricate electrical circuits and sophisticated software architecture, reflects a commitment to excellence in the field 
+									of robotics. Join me in exploring the evolution of our robot through individual functionalities and competition highlights captured in compelling videos.
+									<br/>		
+								</p>
+							</section>
+							<section class="post">
+									<dl>
+										<dt>Mechanical Design</dt>
+										<dd>
+											<p> In our mechanical design approach, we prioritized compactness and weight for ease of steering and effective police car pushing. After exploring steering options, 
+												we chose differential steering for its simplicity and past success in lab experiments. We abandoned hot glue in favor of screws, nuts, and bolts for a more secure 
+												and even mounting. The 12V DC High Torque Worm gear motors, selected for their torque, replaced the initial Yellow T-motors. Wheels with a wider diameter and 
+												additional width, padded with sponge for better grip, were mounted on motor shaft adapters using screws. The chassis, crafted from 1/8th inch laser-cut acrylic, 
+												featured a lower base housing motors, sensors, and the battery, and an upper base for perfboards. Arm-like protrusions on the front end prevented trophies from 
+												sliding during pushing. Special holders for the ultrasonic sensors were designed and 3D printed.
+											</p>
+											<div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-7">
+														<a href="images/GTA_2.PNG" data-lightbox="gallery" data-title="Design of mechanical components">
+															<span class="image fit">
+																<img src="images/GTA_2.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Design of mechanical components</figcaption>
+															</span>
+														</a>
+													</div>
+													<div class="col-5">
+														<a href="images/GTA_3.PNG" data-lightbox="gallery" data-title="Fabricated and assembled components">
+															<span class="image fit">
+																<img src="images/GTA_3.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Fabricated and assembled components</figcaption>
+															</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</dd>	
+										<dt>Electrical Design</dt>
+										<dd>
+											<p>
+												In our electronics phase, we meticulously tested individual circuits on breadboards before finalizing them. Jumpers and molex connectors 
+												linked the boards, and safety features like an SPDT switch for battery disconnection and a slider switch for ESP32-S2 power control were added.
+												<div class="row">
+													<div class="col-12 col-6-small">
+														<ol style="text-align: justify;">
+															<li><b>Vive Circuit:</b> Modified for optimal results, the Vive circuit provided robot coordinates. Despite occasional noise and inaccurate readings, it performed well.</li>
+															<li><b>Beacon Detection Circuit:</b> Utilizing a phototransistor and a 3-stage opamp signal conditioning circuit, this circuit successfully detected the beacon signal from 2.5 meters away.</li>
+															<li><b>Ultrasonic Sensors for Wall Following:</b> Originally planned for six sensors, three were used for simplicity one at front and two on the left. Level shifters accommodated the 5V ultrasonic sensor signals for the 3.3V ESP32 logic.</li>
+															<li><b>Power Circuit:</b> Three power supplies were employed - 3.3V for Vive and IR, 5V for ultrasonic sensors, ESP32, and motor driver, and 14V for motors. Switches and converters ensured efficient power management.</li>
+															<li><b>MCU Board and Motor Driver:</b> Featuring the ESP32 S2, motor driver, and connectors for various components, this board facilitated high torque and 100 rpm speed. Adjustments were made due to the change in motors.</li>
+														</ol>
+													</div>
+												</div>
+											</p>
+											<div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-4">
+														<a href="images/GTA_4.PNG" data-lightbox="gallery" data-title="Vive circuit">
+															<span class="image fit">
+																<img src="images/GTA_4.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Vive circuit</figcaption>
+															</span>
+														</a>
+													</div>
+													<div class="col-5">
+														<a href="images/GTA_5.PNG" data-lightbox="gallery" data-title="Beacon detection circuit">
+															<span class="image fit">
+																<img src="images/GTA_5.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Beacon detection circuit</figcaption>
+															</span>
+														</a>
+													</div>
+													<div class="col-3">
+														<a href="images/GTA_6.PNG" data-lightbox="gallery" data-title="Ultrasonic sensor and level shifter circuit">
+															<span class="image fit">
+																<img src="images/GTA_6.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Ultrasonic sensor and level shifter circuit</figcaption>
+															</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="box alt">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-7">
+														<a href="images/GTA_7.PNG" data-lightbox="gallery" data-title="Power circuit">
+															<span class="image fit">
+																<img src="images/GTA_7.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">Power circuit</figcaption>
+															</span>
+														</a>
+													</div>
+													<div class="col-5">
+														<a href="images/GTA_8.PNG" data-lightbox="gallery" data-title="MCU board and motor driver circuit">
+															<span class="image fit">
+																<img src="images/GTA_8.PNG" alt="" />
+																<figcaption style="text-align: center; font-style: italic;">MCU board and motor driver circuit</figcaption>
+															</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</dd>
+										<dt>Process and Code Architecture</dt>
+										<dd>
+											<p> In designing the processor and code architecture, our autonomous approach prioritizes tasks, with wall following as the default behavior. 
+												The wall following algorithm ensures the robot moves along the arena walls, actively adjusting alignment and turning right when a front 
+												obstacle is detected. After three turns, the task priority shifts to trophy detection, where the robot utilizes an IR detection circuit 
+												to locate trophies, moving towards and pushing them with the help of the front ultrasonic sensor. Subsequently, the priority transitions 
+												to police car tracking, employing two Vive circuits to determine position and slope, broadcasting coordinates, and pushing the police car.
+											</p>
+										</dd>
+										<figure>
+											<div class="image main"><img src="images/GTA_9.PNG" alt="" />
+												<figcaption><center> <i>Block diagram of processor & communication architecture</i> </center></figcaption>
+											</div>
+										</figure>
+										<dt>Retrospective</dt>
+										<dd>
+											<p> In the Grand Theft Autonomous 2022C competition, our team demonstrated exceptional skill and strategic prowess, securing the <b><i>runners-up position.</i></b>
+											</p>
+										</dd>
+									</dl>
+									<ul class="actions special">
+										<li><a href="https://drive.google.com/file/d/1HTkKXLdaLdS0CPoC4kfoDKOXb4dZptVY/view?usp=sharing" target="_blank" class="button primary large">Complete Report</a></li>
+									</ul>
+									<h3>Collaborators</h3>
+											<ul>
+												<li>Jalaj Shukla</li>
+												<li>Sahil Mangaonkar</li>
+												<li>Aamir Khambaty</li>
+											</ul>
+							</section>
+					</div>
+				
+
+				<!-- Footer -->
+				<!--
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Rohan Shende</li><li>Design Portfolio</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Include jQuery -->
+			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+			<!-- Include Lightbox2 JavaScript at the end of your body tag -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+			<!-- Custom JavaScript to close lightbox when clicking outside the image -->
+			<script>
+				$(document).on('click', '.lightbox', function(e) {
+					if (e.target === this) {
+						$(this).trigger('click');
+					}
+				});
+			</script>
+	</body>
+</html>

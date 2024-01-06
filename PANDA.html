@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PANDA</title>
+		<!-- Include Lightbox2 stylesheets and scripts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Rohan Shende</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About me</a></li>
+							<li class="active"><a href="index.html">My work</a></li>
+							<li><a href="generic.html">Experience</a></li>
+							<li><a href="education.html">Education</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rohanshende1999" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/rohanshende1811" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h3>PANDA: Robot toy to detect neuorodevelopmental delays in infants</h3>
+									<p><b><i><a href="https://www.med.upenn.edu/rehabilitation-robotics-lab/">Rehabilitation Robotics Lab, University of Pennsylvania</a></i></b></p>
+								</header>
+								<figure>
+									<div class="image main"><img src="images/PANDA_1.PNG" alt="" />
+										<figcaption><center> <i>Intended use of the toy with the infant</i> </center></figcaption>
+									</div>
+								</figure>
+								<p> <b>Introduction</b> <br/>
+									About 5-10 % of infants are born with neurodevelopmental disabilities such as Cerebral Palsy(CP). Such disabilities present as an array of cognitive, 
+									perception, and motor impairments. Rehabilitation has been shown to be especially effective before 2 years of age, 
+									due to the high neuroplasticity seen in infants. In order for this early intervention to occur, it is imperative that impairment is detected during this 
+									small window of development. Combining natural play with quantitative measurements of developmental milestones can be an effective way to swiftly and 
+									efficiently detect infants who are at risk of developmental delays.  Clinical studies have established differences in toy interaction behaviors between 
+									healthy infants and those at risk for developmental delays. The proposed smart toy aims to enhance the quantitative assessment of infant toy interactions 
+									in order to detect risks of developing motor delays. <br/>
+									<b>Working</b> <br/>
+									The toy has lossy sensors, which are 3D printed lattices made from soft resin through which optical fibers are passed. Light from an LED comes in through one
+									end of the optical fiber, and is detetced by a photodiode at the other end. When the sensor is compressed, the optical fibre bends which scatters the light.
+									The amount of light scattered is co-related to the force exerted on the sensor.
+								</p>
+							</section>
+							<section class="post">
+								<h3>My contributions</h3>
+									<dl>
+										<dt>Smart Toy Designing</dt>
+										<dd>
+											<p> The face and body of the toy was designed to hold the lossy sensors, electrical components and the PCB, while keeping the size of the toy ideal for infants
+												to play with. Slots were strategically incorporated into the face to house the sensors, which were instrumental in capturing data and facilitating interaction.
+												Holders, placed in their respective slots, were designed to secure the LED and photodiode pairs in place. These holders play a crucial role in ensuring the 
+												accurate positioning and alignment of the LED and photodiode with the optical fibers. All of the parts were designed using Onshape and assembled in SolidWorks.
+											</p>
+											<div class="image main">
+												<a href="images/PANDA_2.PNG" data-lightbox="gallery" data-title="Exploded view of toy">
+													<span class="image fit">
+														<img src="images/PANDA_2.PNG" alt="" />
+														<figcaption style="text-align: center; font-style: italic;">Exploded view of toy</figcaption>
+													</span>
+												</a>
+											</div>
+										</dd>
+										<dt>Smart Toy Development</dt>
+										<dd>
+											<p> 3D printing was the primary process used for fabrication of the toy.
+											</p>
+											<div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Component</th>
+															<th>Material</th>
+															<th>3D Printer</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Face</td>
+															<td>ABS</td>
+															<td>Stratasys F120 FDM</td>
+														</tr>
+														<tr>
+															<td>PCB Housing</td>
+															<td>ABS</td>
+															<td>Stratasys F120 FDM</td>
+														</tr>
+														<tr>
+															<td>Lattices</td>
+															<td>Flexible 80A Resin</td>
+															<td>Formlabs Form 3B+</td>
+														</tr>
+														<tr>
+															<td>LED, Photodiode Holders</td>
+															<td>Flexible 80A Resin</td>
+															<td>Formlabs Form 3B+</td>
+														</tr>
+													</tbody>
+												</table>
+												<p> The 3D printed lattices and holders were fixed in their respective slots using hot glue. LEDs and Photodiodes were 
+													soldered to jumper cables, which were soldered on the main PCB. The PCB was placed inside the PCB Housing and the entire 
+													toy was then wrapped with cloth.
+												</p>
+											</div>
+										</dd>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4">
+													<a href="images/PANDA_3.PNG" data-lightbox="gallery" data-title="Resin 3D printed lattices">
+														<span class="image fit">
+															<img src="images/PANDA_3.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Resin 3D printed lattices</figcaption>
+														</span>
+													</a>
+												</div>
+												<div class="col-4">
+													<a href="images/PANDA_4.PNG" data-lightbox="gallery" data-title="Assembled lattices on initial prototype">
+														<span class="image fit">
+															<img src="images/PANDA_4.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Assembled lattices on initial prototype</figcaption>
+														</span>
+													</a>
+												</div>
+												<div class="col-4">
+													<a href="images/PANDA_5.PNG" data-lightbox="gallery" data-title="Final prototype">
+														<span class="image fit">
+															<img src="images/PANDA_5.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Final prototype</figcaption>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<dt>Smart Toy Testing</dt>
+										<dd>
+											<p> 
+											</p>
+										</dd>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4">
+													<a href="images/PANDA_7.PNG" data-lightbox="gallery" data-title="Testing of lossy sensor">
+														<span class="image fit">
+															<img src="images/PANDA_7.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Testing of lossy sensor</figcaption>
+														</span>
+													</a>
+												</div>
+												<div class="col-4">
+													<a href="images/PANDA_8.PNG" data-lightbox="gallery" data-title="Testing of lossy sensor">
+														<span class="image fit">
+															<img src="images/PANDA_8.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Testing of lossy sensor</figcaption>
+														</span>
+													</a>
+												</div>
+												<div class="col-4">
+													<a href="images/PANDA_6.PNG" data-lightbox="gallery" data-title="Final testing setup">
+														<span class="image fit">
+															<img src="images/PANDA_6.PNG" alt="" />
+															<figcaption style="text-align: center; font-style: italic;">Final testing setup</figcaption>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</dl>
+									<h3>Collaborators</h3>
+											<ul>
+												<li>Rithwik Udayagiri</li>
+												<li>Jessica Yin</li>
+												<li>Varun Trivedi</li>
+												<li>Francis Sowande</li>
+											</ul>
+							</section>
+					</div>
+				
+
+				<!-- Footer -->
+				<!--
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Rohan Shende</li><li>Design Portfolio</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Include jQuery -->
+			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+			<!-- Include Lightbox2 JavaScript at the end of your body tag -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+			<!-- Custom JavaScript to close lightbox when clicking outside the image -->
+			<script>
+				$(document).on('click', '.lightbox', function(e) {
+					if (e.target === this) {
+						$(this).trigger('click');
+					}
+				});
+			</script>
+	</body>
+</html>
